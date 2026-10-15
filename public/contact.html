@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Ctrl+Alt+Brew</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="navbar">
+  <a class="logo" href="/"><kbd>Ctrl</kbd><span>+</span><kbd>Alt</kbd><span>+</span>Brew</a>
+  <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="/" data-page="home">Home</a></li>
+    <li><a href="/menu" data-page="menu">Menu</a></li>
+    <li><a href="/about" data-page="about">About</a></li>
+    <li><a href="/contact" data-page="contact">Contact</a></li>
+  </ul>
+</header>
+  <main>
+    <div class="split">
+      <img src="/images/contact.jpg" alt="Hands holding a cup of coffee">
+      <section class="panel">
+        <h1>Contact Us</h1>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+          <p id="form-message" role="status"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+  <script src="/js/main.js"></script>
+  <script src="/js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu | Ctrl+Alt+Brew</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="navbar">
+  <a class="logo" href="/"><kbd>Ctrl</kbd><span>+</span><kbd>Alt</kbd><span>+</span>Brew</a>
+  <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="/" data-page="home">Home</a></li>
+    <li><a href="/menu" data-page="menu">Menu</a></li>
+    <li><a href="/about" data-page="about">About</a></li>
+    <li><a href="/contact" data-page="contact">Contact</a></li>
+  </ul>
+</header>
+  <main>
+  <h1 class="page-title">Our Menu</h1>
+
+  <section class="featured" id="featured">
+    <h2 class="section-title">Featured Drinks</h2>
+    <p class="note">Our specialty picks, handpicked by the team. Try these first.</p>
+    <div class="featured-grid" id="featured-grid"></div>
+  </section>
+
+  <h2 class="section-title">Order from the Terminal</h2>
+  <p class="note">Prefer typing? Use commands to browse and order. Try <code>help</code>, <code>menu iced</code>, or <code>order latte</code>. You can order by name or by number.</p>
+  <section class="terminal" aria-label="Order terminal">
+    <div class="terminal-bar"><span></span><span></span><span></span>order.sh</div>
+    <div class="terminal-output" id="terminal-output" aria-live="polite"></div>
+    <form class="terminal-form" id="terminal-form" autocomplete="off">
+      <label for="terminal-input">$</label>
+      <input id="terminal-input" type="text" spellcheck="false" placeholder="type a command, e.g. help">
+    </form>
+  </section>
+
+  <h2 class="section-title">Full Menu</h2>
+  <p class="note">The caffeine bar shows how strong each drink is, from 0% (light) to 100% (maximum boost). Use the filters to narrow the list.</p>
+  <div class="filters" id="filters">
+    <button data-category="all" class="active">All</button>
+    <button data-category="classic">Classic</button>
+    <button data-category="milk">Milk-based</button>
+    <button data-category="iced">Iced</button>
+    <button data-category="specialty">Specialty</button>
+  </div>
+  <div class="menu-grid" id="menu-grid"><p class="status">Compiling your coffee... 0 errors, 0 warnings</p></div>
+</main>
+  <script src="/js/main.js"></script>
+<script src="/js/menu.js"></script>
+<script src="/js/terminal.js"></script>
+</body>
+</html>

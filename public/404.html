@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 Not Found | Ctrl+Alt+Brew</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="/"><kbd>Ctrl</kbd><span>+</span><kbd>Alt</kbd><span>+</span>Brew</a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/" data-page="home">Home</a></li>
+      <li><a href="/menu" data-page="menu">Menu</a></li>
+      <li><a href="/about" data-page="about">About</a></li>
+      <li><a href="/contact" data-page="contact">Contact</a></li>
+    </ul>
+  </header>
+  <main>
+    <section class="panel error-panel">
+      <p class="error-line"><span class="err-tag">ERROR</span> 404: drink not found</p>
+      <pre class="stack">GET <span id="missing-path">/</span>
+  at menu.find (server.js)
+  at Layer.handle (express/router)
+  result: 0 drinks, 0 pages</pre>
+      <p>That page is not on our menu. Head back home to keep brewing.</p>
+      <a class="btn" href="/">cd /home</a>
+    </section>
+  </main>
+  <script src="/js/main.js"></script>
+  <script>
+    document.getElementById('missing-path').textContent = location.pathname + location.search;
+  </script>
+</body>
+</html>
